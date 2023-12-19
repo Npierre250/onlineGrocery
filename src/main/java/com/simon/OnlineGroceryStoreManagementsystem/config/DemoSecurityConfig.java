@@ -32,7 +32,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests()
-				.antMatchers("/").hasRole("JOB_SEEKER")
+				// .antMatchers("/").hasRole("JOB_SEEKER")
 				.antMatchers("/jobs/showFormForAdd").permitAll()
 				.antMatchers("/jobs/*").authenticated()
 				.antMatchers("/email/*").authenticated()
